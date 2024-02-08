@@ -1,0 +1,46 @@
+/* LayerBuilder */
+
+.layerBuilderEntry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid lightgray;
+    padding: 1rem 0;
+}
+
+.layerBuilderEntry p {
+    padding: 0;
+    margin: 0;
+}
+
+.layerBuilderEntry button {
+    width:  auto;
+    height: 1.25rem;
+    margin-left: 1rem;
+}
+
+.layerBuilderEntry progress {
+    width: 10rem;
+}
+
+.layerColorPreview {
+    width: 2rem;
+    height: 1rem;
+    border: 1px solid black;
+    margin: 0 1rem 0 5px;
+}
+
+.layerWidth, .layerHeight {
+    text-align: right;
+}
+
+.layerDimensions p {
+    margin-right: 1rem;
+    float: left;
+}
+
+/* layerAdd */
+
+.layerAdd button {
+    width: 100%;
+}

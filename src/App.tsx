@@ -1,8 +1,53 @@
 import { useState } from 'react'
+import Layer from './Layer';
 import CakeBuilder from './CakeBuilder/CakeBuilder'
 import './App.css'
 
-const App: React.FC = () => {
+function App() {
+
+  //example array, will eventually start with empty array
+  const layerArr: Layer[] = [
+    {
+      height: 9,
+      width: 5,
+      color: "brown",
+    },
+
+    {
+      height: 4,
+      width: 3,
+      color: "chocolate",
+    },
+
+    {
+      height: 4,
+      width: 3,
+      color: "brown",
+    },
+  ];
+
+  const [layers, setLayers] = useState <Layer[]>(layerArr);
+
+  // const [layers, setLayers] = useState <Layer[]>();
+  
+  const deleteLayer = (index: number) => {
+    const updatedLayers = [...layers];
+    updatedLayers.splice(index, 1);
+    setLayers(updatedLayers);
+  };
+
+  return (
+    <>
+      <CakeBuilder layers={layers} deleteLayer={deleteLayer}/>
+    </>
+  );
+};
+        
+export default App;    
+        
+//Sarah's App.tsx (didn't want to mess up)
+        
+<!-- const App: React.FC = () => {
   const [cakeLayers, setCakeLayers] = useState<string[]>([
     'layer1',
     'layer2',
@@ -25,37 +70,4 @@ const App: React.FC = () => {
   <footer className="app-footer">2024 Cake Layer Builder Inc.</footer>
   </div>
   );
-};
-
-export default App;
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
+}; -->

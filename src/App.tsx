@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import CakeBuilder from './CakeBuilder/CakeBuilder'
 import './App.css'
 
 const App: React.FC = () => {
@@ -10,6 +11,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
+            <CakeBuilder/>
       <header className="app-header">Cake Builder App</header>
       <main className="app-main">
         <div className="cake-container">

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Layer from './Layer';
 import CakeBuilder from './CakeBuilder/CakeBuilder'
+import './App.css'
 
 function App() {
 
@@ -39,7 +40,34 @@ function App() {
     <>
       <CakeBuilder layers={layers} deleteLayer={deleteLayer}/>
     </>
-  )
-}
+  );
+};
+        
+export default App;    
+        
+//Sarah's App.tsx (didn't want to mess up)
+        
+<!-- const App: React.FC = () => {
+  const [cakeLayers, setCakeLayers] = useState<string[]>([
+    'layer1',
+    'layer2',
+    'layer3',
+  ]);
 
-export default App;
+  return (
+    <div className="app-container">
+            <CakeBuilder/>
+      <header className="app-header">Cake Builder App</header>
+      <main className="app-main">
+        <div className="cake-container">
+          {cakeLayers.map((layer, index) => (
+            <div key={index} className="cake-layer">
+              {layer}
+            </div>
+          ))}
+    </div>
+  </main>
+  <footer className="app-footer">2024 Cake Layer Builder Inc.</footer>
+  </div>
+  );
+}; -->

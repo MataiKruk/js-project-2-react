@@ -50,6 +50,7 @@ const LayerForm = () => {
 )};
 
 const CakeBuilder = () => {
+  
   const deleteLayer = (index: number) => {
     const updatedLayers = [...layers];
     updatedLayers.splice(index, 1);

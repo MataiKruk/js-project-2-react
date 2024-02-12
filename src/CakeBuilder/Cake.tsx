@@ -1,4 +1,3 @@
-import CakeBuilder from "./CakeBuilder";
 import Layer from "../Layer";
 import CakeLayer from "./CakeLayer";
 

@@ -2,9 +2,12 @@ import "./CakeBuilder.css";
 import Layer from "../Layer";
 
 interface LayerFormProps {
+    setLayers: (layers: Layer[]) => void,
     layers: Layer[],
     toggleForm: () => void;
 }
+
+
 
 const LayerForm = ( {layers, toggleForm} : LayerFormProps) => {
     return (

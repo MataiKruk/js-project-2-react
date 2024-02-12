@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Layer from './Layer';
 import CakeBuilder from './CakeBuilder/CakeBuilder'
 import './App.css'
+import Cake from './CakeBuilder/Cake';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
   const layerArr: Layer[] = [
     {
       height: 9,
-      width: 5,
+      width: 2,
       color: "brown",
     },
 
@@ -21,7 +22,7 @@ function App() {
 
     {
       height: 4,
-      width: 3,
+      width: 4,
       color: "brown",
     },
   ];
@@ -39,6 +40,7 @@ function App() {
   return (
     <>
       <CakeBuilder layers={layers} deleteLayer={deleteLayer}/>
+      <Cake layers={layers}></Cake>
     </>
   );
 };

@@ -1,46 +1,110 @@
 /* LayerBuilder */
 
 .layerBuilderEntry {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid lightgray;
-    padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid lightgray;
+  padding: 1rem 0;
 }
 
 .layerBuilderEntry p {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .layerBuilderEntry button {
-    width:  auto;
-    height: 1.25rem;
-    margin-left: 1rem;
+  width: auto;
+  height: 1.25rem;
+  margin-left: 1rem;
 }
 
 .layerBuilderEntry progress {
-    width: 10rem;
+  width: 10rem;
 }
 
 .layerColorPreview {
-    width: 2rem;
-    height: 1rem;
-    border: 1px solid black;
-    margin: 0 1rem 0 5px;
+  width: 2rem;
+  height: 1rem;
+  border: 1px solid black;
+  margin: 0 1rem 0 5px;
 }
 
-.layerWidth, .layerHeight {
-    text-align: right;
+.layerWidth,
+.layerHeight {
+  text-align: right;
 }
 
 .layerDimensions p {
-    margin-right: 1rem;
-    float: left;
+  margin-right: 1rem;
+  float: left;
 }
 
 /* layerAdd */
 
 .layerAdd button {
-    width: 100%;
+  width: 100%;
+}
+/* Styles for the container */
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f8f8f8;
+}
+
+/* Styles for the form */
+.form-custom {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for labels */
+.form-label {
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for select dropdown */
+.form-select {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+/* Styles for input range slider */
+.form-range {
+  width: 100%;
+}
+
+/* Display value inline with the slider */
+.form-range-value {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Styles for buttons */
+.form-btn {
+  padding: 10px 20px;
+  margin: 10px 5px 0 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for the second button to differentiate */
+.form-btn-alt {
+  background-color: #dc3545;
+}
+
+.form-btn:hover,
+.form-btn-alt:hover {
+  opacity: 0.8;
 }

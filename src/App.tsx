@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import Layer from './Layer';
-import CakeBuilder from './CakeBuilder/CakeBuilder'
-import './App.css'
+import { useState } from "react";
+import Layer from "./Layer";
+import CakeBuilder from "./CakeBuilder/CakeBuilder";
+import "./App.css";
 import Cake from './CakeBuilder/Cake';
 
-function App() {
 
+function App() {
   //example array, will eventually start with empty array
   const layerArr: Layer[] = [
     {
@@ -27,28 +27,34 @@ function App() {
     },
   ];
 
-  const [layers, setLayers] = useState <Layer[]>(layerArr);
+  const [layers, setLayers] = useState<Layer[]>(layerArr);
 
   // const [layers, setLayers] = useState <Layer[]>();
-  
+
   const deleteLayer = (index: number) => {
     const updatedLayers = [...layers];
     updatedLayers.splice(index, 1);
     setLayers(updatedLayers);
   };
+  const addLayer = (layer: Layer) => {
+    setLayers([...layers, layer]);
+  };
 
   return (
     <>
-      <CakeBuilder layers={layers} deleteLayer={deleteLayer}/>
-      <Cake layers={layers}></Cake>
+      <CakeBuilder
+        addLayer={addLayer}
+        layers={layers}
+        deleteLayer={deleteLayer}
+      />
     </>
   );
-};
-        
-export default App;    
-        
+}
+
+export default App;
+
 //Sarah's App.tsx (didn't want to mess up)
-        
+
 // const App: React.FC = () => {
 //   const [cakeLayers, setCakeLayers] = useState<string[]>([
 //     'layer1',

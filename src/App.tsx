@@ -2,13 +2,15 @@ import { useState } from "react";
 import Layer from "./Layer";
 import CakeBuilder from "./CakeBuilder/CakeBuilder";
 import "./App.css";
+import Cake from './CakeBuilder/Cake';
+
 
 function App() {
   //example array, will eventually start with empty array
   const layerArr: Layer[] = [
     {
       height: 9,
-      width: 5,
+      width: 2,
       color: "brown",
     },
 
@@ -20,7 +22,7 @@ function App() {
 
     {
       height: 4,
-      width: 3,
+      width: 4,
       color: "brown",
     },
   ];
